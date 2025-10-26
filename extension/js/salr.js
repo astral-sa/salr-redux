@@ -963,6 +963,7 @@ SALR.prototype.inlineYoutubes = function() {
             jQuery(this).next().children("iframe").attr("type","text/html");
             jQuery(this).next().children("iframe").attr("frameborder","0");
             jQuery(this).next().children("iframe").attr("allowfullscreen","true");
+            jQuery(this).next().children("iframe").attr("referrerpolicy","no-referrer");
 
             jQuery(this).addClass('show-player');
         }
