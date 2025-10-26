@@ -957,13 +957,13 @@ SALR.prototype.inlineYoutubes = function() {
 
             jQuery(this).after('<div><iframe class="salr-player youtube-player"></iframe></div>');
             jQuery(this).next().children("iframe").attr("allow","fullscreen");
-            jQuery(this).next().children("iframe").attr("src", "https://www.youtube.com/embed/" + videoId);
+            jQuery(this).next().children("iframe").attr("src", "https://www.youtube-nocookie.com/embed/" + videoId);
             jQuery(this).next().children("iframe").attr("width","640");
             jQuery(this).next().children("iframe").attr("height","385");
             jQuery(this).next().children("iframe").attr("type","text/html");
             jQuery(this).next().children("iframe").attr("frameborder","0");
             jQuery(this).next().children("iframe").attr("allowfullscreen","true");
-            jQuery(this).next().children("iframe").attr("referrerpolicy","no-referrer");
+            jQuery(this).next().children("iframe").attr("referrerpolicy","strict-origin-when-cross-origin");
 
             jQuery(this).addClass('show-player');
         }
